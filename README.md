@@ -1,4 +1,4 @@
 # brugs-mockup
 
 Just run
-```npm install```
+```npm install``` and ```sass --update scss:css```
