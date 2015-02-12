@@ -1,0 +1,126 @@
+.announcements {
+	& > ul {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.announcements--header {
+	margin-bottom: $content-gutter;
+	@include container(100%);
+	& > h1 {
+		margin: 0;
+		@include span(9 of 12);
+	}
+	& > button {
+		@include span(3 of 12);
+	}
+}
+
+.announcements--item {
+	@include span(100%);
+	h2 {
+		margin: 0;
+		font-size: 1.2rem;
+	}
+	list-style: none;
+	box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 2px 0 rgba(#B3B3B3, 0.5);
+	border-radius: 5px;
+	border: 1px solid lighten($color-text, 50%);
+	padding: $content-gutter;
+	margin: 0 auto;
+	margin-top: $content-gutter/2;
+	position: relative;
+	cursor: pointer;
+	transition: $bg-transition;
+}
+.announcements--item:hover {
+	background-color: lighten($color-brand-secondary, 45%);
+	transition: $bg-transition;
+}
+.announcements--item--info {
+	font-size: 0.7rem;
+	font-weight: 400;
+	color: lighten($color-text, 30%);
+	text-align: right;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.announcements--item--info__danger {
+	@extend .announcements--item--info;
+	color: $color-danger;
+}
+
+.announcements--item--info__success {
+	@extend .announcements--item--info;
+	color: $color-success;
+}
+
+.announcements--item--content, .announcements--item--content-full {
+	margin-bottom: 0;
+	font-style: italic;
+}
+
+.announcements--item--content-full {
+	font-size: 0.8rem;
+}
+
+.announcements--item__sent {
+	@extend .announcements--item;
+	opacity: 0.5;
+	cursor: default;
+	&:hover {
+		background-color: white;
+	}
+}
+
+.announcements--item__edit {
+	cursor: default;
+	background-color: lighten($color-brand-secondary, 45%);
+	@extend .announcements--item;
+	input[type=text], textarea {
+		width: 100%;
+	}
+	label {
+		display: block;
+		position: relative;
+		margin-bottom: 20px;
+		& > div {
+			font-weight: 400;
+			margin-bottom: 5px;
+		}
+	}
+}
+.announcements--item__edit--counter {
+	font-size: 0.8rem;
+	position: absolute;
+	bottom: 7px;
+	right: 7px;
+	color: lighten($color-text, 30%);
+}
+.announcements--item__edit--info {
+	font-weight: 400;
+	text-align: center;
+	margin-top: $content-gutter;
+}
+.announcements--item__edit--footer {
+	margin-top: $content-gutter;
+	.button--remove {
+		float: right;
+	}
+}
+
+.announcements--bottom-controlls {
+	@include span(100%);
+	padding: $content-gutter;
+	font-size: 0.8rem;
+	color: lighten($color-text, 20%);
+	& > * {
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 5px;
+	}
+}

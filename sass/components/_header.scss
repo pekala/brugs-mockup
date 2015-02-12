@@ -1,0 +1,64 @@
+header {
+	background-color: $color-brand;
+	color: white;
+	@include container(100%); 
+	padding: $content-gutter;
+}
+
+.header--logo {
+	@include span(3 of 12);
+	font-size: 0.8rem;
+	img {
+		display: block;
+	}
+}
+
+
+.header--nav {
+	@include span(6 of 12);
+	line-height: 3rem;
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: inline-block;
+	}
+	a {
+		margin-right: 20px;
+		color: white;
+		transition: color 0.3s ease-in-out;
+		&.active {
+			text-decoration: underline;
+		}
+		&:hover {
+			color: $color-brand-secondary;
+			transition: color 0.3s ease-in-out;
+		}
+	}
+}
+
+
+.header--login {
+	@include span(3 of 12);
+	text-align: right;
+	& > * {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.header--login--user {
+	span {
+		display: block;
+	}
+}
+.header--login--user--retailer {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+.header--login--button {
+	@extend .button--transparent;
+	margin: 0 10px;
+	background-color: transparent;
+	border-color: white;
+}

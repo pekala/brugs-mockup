@@ -1,0 +1,31 @@
+$susy: (
+  columns: 12,
+  gutter-position: inside,
+  math: fluid,
+  output: float
+);
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body { 
+	@include container(80em);
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	color: $color-text;
+}
+
+section {
+	@include container(50em);
+	padding: $content-gutter;
+}
+
+a {
+	text-decoration: none;
+	color: $color-text;
+}
